@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>DB Project - User Management</title>
+</head>
+<body>
+  <main>
+      <div id="header">
+          <h2>Select a Function</h2>
+          <button id="refresh-table-btn">Refresh Table</button>
+      </div>
+
+      <select id="function-select">
+          <option value="">-- Select a Function --</option>
+          <option value="add-user">Add a New User</option>
+          <option value="search-name">Search by Name</option>
+          <option value="search-id">Search by User ID</option>
+          <option value="search-creditinfo">Search by Credit Info</option>
+      </select>
+
+      <div id="add-user-section" class="function-section">
+          <h2>Add a New User</h2>
+          <label>Username:</label>
+          <input type="text" id="username-input">
+          <label>Password:</label>
+          <input type="password" id="password-input">
+          <label>First Name:</label>
+          <input type="text" id="firstname-input">
+          <label>Last Name:</label>
+          <input type="text" id="lastname-input">
+          <label>Credit Info:</label>
+          <input type="number" id="creditinfo-input">
+          <label>Address:</label>
+          <input type="text" id="address-input">
+          <label>Email:</label>
+          <input type="email" id="email-input">
+          <label>Phone Number:</label>
+          <input type="tel" id="phone-input">
+          <button id="add-user-btn">Add User</button>
+      </div>
+
+      <div id="search-name-section" class="function-section">
+          <h2>Search Users by Name</h2>
+          <input placeholder="search by name" id="search-input">
+          <button id="search-btn">Search</button>
+      </div>
+
+      <div id="search-id-section" class="function-section">
+          <h2>Search User by ID</h2>
+          <input placeholder="search by user ID" id="search-id-input">
+          <button id="search-id-btn">Search by ID</button>
+      </div>
+
+      <div id="search-creditinfo-section" class="function-section">
+          <h2>Search Users by Credit Info</h2>
+          <label>Min Credit:</label>
+          <input type="number" id="min-creditinfo-input">
+          <label>Max Credit:</label>
+          <input type="number" id="max-creditinfo-input">
+          <button id="search-creditinfo-btn">Search by Credit Info</button>
+      </div>
+
+      <table id="user-table">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Username</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Credit Info</th>
+                  <th>Address</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Delete</th>
+                  <th>Edit</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
